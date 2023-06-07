@@ -186,7 +186,13 @@ h1{
 
 .result-button-area{
   display: grid;
-  /* grid-template-columns: auto; */
-  justify-content: right;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
 
+}
+
+#disclaimer{
+  margin-bottom: 16px;
+  color: var(--text-grey);
 }
