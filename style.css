@@ -115,9 +115,6 @@ div {
   border-color:   red;
 }
 
-body{
-
-}
 
 .home {
   display: grid;
@@ -174,6 +171,23 @@ h1{
   font-size: 40px;
 }
 
+.title-bar{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selector{
+  width: auto;
+  height: 48px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 60px;
+  color: #3984C7;
+  padding: 8px 16px 8px 16px;
+  margin-left: 16px;
+}
+
 .result-button{
   width: 200px;
   height: 50px;
@@ -182,6 +196,10 @@ h1{
   background: var(--primary-blue);
   color: var(--background-white);
   font-weight: bold;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 .result-button-area{
@@ -196,3 +214,4 @@ h1{
   margin-bottom: 16px;
   color: var(--text-grey);
 }
+
