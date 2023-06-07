@@ -175,6 +175,7 @@ h1{
   grid-template-columns: auto auto;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 
 .selector{
@@ -214,4 +215,29 @@ button:hover{
   color: var(--text-grey);
 }
 
+.input{
+  border: solid;
+  border-color: var(--primary-blue);
+  border-radius: var(--border-radius);
+  padding: 16px 8px 16px 8px;
+  margin-bottom: 16px;
+}
 
+.input-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.headers{
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+.input-text{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
