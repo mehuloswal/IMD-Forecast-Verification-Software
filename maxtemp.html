@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/maxtemp.css">
   <title>IMD Forecast Verification</title>
 </head>
 <body>
@@ -12,19 +12,27 @@
     <div class="mobile-message">Hello</div>
   </div>
   <div class="home">
-    <div class="item left-nav">
+    <div class="left-nav">
       <div class="logo">
         <img src="assets/Logo and Text.svg" alt="IMD Image" class="nav-logo">
       </div>
       <div class="nav-buttons">
-        <button class="nav-button max-temp active" onclick="">Max. Temperature</button>
-        <button class="nav-button min-temp" onclick="">Min. Temperature</button>
-        <button class="nav-button rainfall" onclick="">Rainfall</button>
-        <button class="nav-button special-events" onclick="">Special Events</button>
+        <a href="maxtemp.html">
+          <button class="nav-button active" onclick="">Max. Temperature</button>
+        </a>
+        <a href="mintemp.html">
+          <button class="nav-button" onclick="">Min. Temperature</button>
+        </a>
+        <a href="rainfall.html">
+          <button class="nav-button" onclick="">Rainfall</button>
+        </a>
+        <a href="special.html">
+          <button class="nav-button" onclick="">Special Events</button>
+        </a>
       </div>
-      <button class="nav-button exit">Exit</button>
+      <button class="nav-button exit" onclick="">Exit</button>
     </div>
-    <div class="item workspace">
+    <div class="workspace">
       <div class="title-bar">
         <h1>Max Temperature</h1>
         <div class="title-bar-inputs">
@@ -49,5 +57,5 @@
     </div>
   </div>
 </body>
-<script src="script.js"></script>
+<script src="js/maxtemp.js"></script>
 </html>

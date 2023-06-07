@@ -1,0 +1,217 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* ------------- CSS RESET ENDS ---------*/
+
+:root {
+  --primary-blue: #3984C7;
+  --secondary-blue: #8BDBC0;
+  --primary-yellow: #E1DF90;
+  --secondary-yellow: #FFFFE0;
+  --text-black: #1E1E1E;
+  --text-grey: #333333;
+  --background-white: #F5F5F5;
+  --border-radius: 4px;
+  --min-width: 980px;
+  --max-width: 1440px;
+}
+
+/* --------- Variable Declarartion Ends------- */
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 980px) {
+  * {
+    display: none;
+  }
+
+  .on-mobile{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-message{
+    display: block;
+  }
+
+}
+
+.on-mobile{
+  display: none;
+}
+
+div {
+  /* border-style:   solid; */
+  border-width:   1px;
+  border-color:   red;
+}
+
+
+.home {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 4fr;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+}
+
+.left-nav{
+  background-color: var(--primary-blue);
+  padding: 32px;
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+}
+
+.nav-logo{
+  margin-bottom: 64px;
+}
+
+.nav-button{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 24px;
+  border: none;
+  background: var(--secondary-yellow);
+}
+
+.active{
+  background: var(--secondary-blue);
+}
+
+.exit {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 24px;
+  border: none;
+  background: #EB5757;
+  color: var(--background-white);
+  font-weight: bold;
+}
+
+
+.workspace{
+  padding: 40px 64px 40px 64px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.title-bar{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selector{
+  width: auto;
+  height: 48px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 60px;
+  color: #3984C7;
+  padding: 8px 16px 8px 16px;
+  margin-left: 16px;
+}
+
+.result-button{
+  width: 200px;
+  height: 50px;
+  margin-bottom: 16px;
+  border: none;
+  background: var(--primary-blue);
+  color: var(--background-white);
+  font-weight: bold;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.result-button-area{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#disclaimer{
+  margin-bottom: 16px;
+  color: var(--text-grey);
+}
+
+
