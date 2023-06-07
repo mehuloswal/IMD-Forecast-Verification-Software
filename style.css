@@ -76,9 +76,18 @@ p, h1, h2, h3, h4, h5, h6 {
   --text-black: #1E1E1E;
   --text-grey: #333333;
   --background-white: #F5F5F5;
+  --border-radius: 4px;
+  --min-width: 980px;
+  --max-width: 1440px;
 }
 
-@media only screen and (max-width: 900px) {
+/* --------- Variable Declarartion Ends------- */
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 980px) {
   * {
     display: none;
   }
@@ -101,9 +110,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 div {
-  /* border-style                :   solid; */
-  border-width                :   1px;
-  border-color                :   red;
+  /* border-style:   solid; */
+  border-width:   1px;
+  border-color:   red;
 }
 
 body{
@@ -114,8 +123,8 @@ body{
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 4fr;
-  max-width: 1440px;
-  min-width: 980px;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
 }
 
 .left-nav{
@@ -130,7 +139,7 @@ body{
 }
 
 
-div.button-select{
+.button-select{
   background: var(--secondary-blue);
 }
 
@@ -149,4 +158,35 @@ div.button-select{
   border: none;
   background: #EB5757;
   color: var(--background-white);
+  font-weight: bold;
+}
+
+
+.workspace{
+  padding: 40px 64px 40px 64px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.result-button{
+  width: 200px;
+  height: 50px;
+  margin-bottom: 16px;
+  border: none;
+  background: var(--primary-blue);
+  color: var(--background-white);
+  font-weight: bold;
+}
+
+.result-button-area{
+  display: grid;
+  /* grid-template-columns: auto; */
+  justify-content: right;
+
 }
