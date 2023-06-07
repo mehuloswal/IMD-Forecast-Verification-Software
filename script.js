@@ -36,3 +36,8 @@ const places = ['Pune', 'Mumbai', 'Satara'];
   document.querySelector('#place').innerHTML = placeSelectors;
   
 }();
+
+// Add active
+function addActive(ele){
+  
+}
