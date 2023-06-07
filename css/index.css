@@ -175,43 +175,35 @@ h1{
   grid-template-columns: auto auto;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 36px;
 }
 
-.selector{
-  width: auto;
-  height: 48px;
-  border: 2px solid var(--primary-blue);
-  border-radius: 60px;
-  color: #3984C7;
-  padding: 8px 16px 8px 16px;
-  margin-left: 16px;
-}
-
-.result-button{
-  width: 200px;
-  height: 50px;
-  margin-bottom: 16px;
-  border: none;
-  background: var(--primary-blue);
-  color: var(--background-white);
-  font-weight: bold;
-}
 
 button:hover{
   cursor: pointer;
 }
 
-.result-button-area{
+.input{
   display: grid;
   grid-template-columns: auto auto;
-  justify-content: space-between;
+  grid-template-rows: auto auto;
+  gap: 64px;
+  padding: 16px;
+}
+
+.input-card{
+  background-color: #3984C7;
+  font-size: 2rem;
+  display: grid;
+  justify-content: center;
   align-items: center;
-
 }
 
-#disclaimer{
-  margin-bottom: 16px;
-  color: var(--text-grey);
+a{
+  text-decoration: none;
+  color: var(--background-white);
 }
 
-
+a:hover{
+  opacity: 75%;
+}
