@@ -37,7 +37,5 @@ const places = ['Pune', 'Mumbai', 'Satara'];
   
 }();
 
-// Add active
-function addActive(ele){
-  
-}
+// Initial Input Data Rendering in input section
+

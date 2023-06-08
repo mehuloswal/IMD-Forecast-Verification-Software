@@ -226,6 +226,7 @@ button:hover{
 .input-row{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 8px;
 }
 
 .headers{
@@ -240,4 +241,23 @@ button:hover{
   display: grid;
   align-items: center;
   justify-content: center;
+  grid-template-columns: auto;
 }
+
+a{
+  text-decoration: none;
+  color: var(--background-white);
+}
+
+a:hover{
+  opacity: 80%;
+}
+
+.array{
+  width: 50%;
+}
+
+.input-bar{
+  width: 80px;
+}
+
