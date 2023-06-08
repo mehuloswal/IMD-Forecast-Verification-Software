@@ -161,7 +161,7 @@ div {
 .workspace{
   padding: 40px 64px 40px 64px;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 600px auto;
 }
 
 h1{
@@ -219,8 +219,9 @@ button:hover{
   border: solid;
   border-color: var(--primary-blue);
   border-radius: var(--border-radius);
-  padding: 16px 8px 16px 8px;
+  padding: 16px 32px 16px 32px;
   margin-bottom: 16px;
+  overflow-y: scroll;
 }
 
 .input-row{
@@ -237,12 +238,6 @@ button:hover{
   line-height: 29px;
 }
 
-.input-text{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: auto;
-}
 
 a{
   text-decoration: none;

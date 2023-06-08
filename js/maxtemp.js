@@ -41,14 +41,14 @@ const places = ['Pune', 'Mumbai', 'Satara'];
 !function(){
   const tableBody = document.querySelector('.input-table');
   console.log(tableBody);
-  const numRows = 30;
+  const numRows = 31;
   const numCols = 6;
 
   for (let i = 0; i < numRows; i++) {
     const row = document.createElement('tr');
     const date = document.createElement('div');
     row.className = 'input-row';
-    date.innerHTML = `${i}`;
+    date.innerHTML = `${i+1}`;
     date.className = 'input-text';
     row.appendChild(date);
     
