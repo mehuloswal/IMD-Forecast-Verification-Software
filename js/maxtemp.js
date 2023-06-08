@@ -38,4 +38,31 @@ const places = ['Pune', 'Mumbai', 'Satara'];
 }();
 
 // Initial Input Data Rendering in input section
+!function(){
+  const tableBody = document.querySelector('.input-table');
+  console.log(tableBody);
+  const numRows = 30;
+  const numCols = 6;
 
+  for (let i = 0; i < numRows; i++) {
+    const row = document.createElement('tr');
+    const date = document.createElement('div');
+    row.className = 'input-row';
+    date.innerHTML = `${i}`;
+    date.className = 'input-text';
+    row.appendChild(date);
+    
+    for (let j = 0; j < numCols; j++) {
+      const cell = document.createElement('td');
+      const input = document.createElement('input');
+      input.className = 'input-bar'
+      input.type = 'text';
+      input.id = `input_${i}_${j}`;
+      // input.addEventListener('input', handleInput);
+      cell.appendChild(input);
+      row.appendChild(cell);
+    }
+    console.log('Running');
+    tableBody.appendChild(row);
+  }
+}();
