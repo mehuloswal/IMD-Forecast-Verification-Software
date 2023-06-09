@@ -6,23 +6,74 @@ let inputObject = {
   input: []
 }
 
+// Definitions
+const obsArr = [];
+const day1Arr = [];
+const day2Arr = [];
+const day3Arr= [];
+const day4Arr= [];
+const day5Arr = [];
+const numRows = 31;
+const numCols = 6;
+
+const createArr = (columnNumber) => {
+  for(let i = 0; i < numRows; ++i){
+      const elementValue = Number(document.getElementById(`array-${i}-${columnNumber}`).value)
+      switch(columnNumber){
+          case 0: {
+              obsArr.push(elementValue);
+              break;
+          }
+
+          case 1: {
+              day1Arr.push(elementValue);
+              break;
+          }
+
+          case 2: {
+              day2Arr.push(elementValue);
+              break;
+          }
+
+          case 3: {
+              day3Arr.push(elementValue);
+              break;
+          }
+
+          case 4: {
+              day4Arr.push(elementValue);
+              break;
+          }
+
+          case 5: {
+              day5Arr.push(elementValue);
+              break;
+          }
+      }
+      
+  }
+
+}
+
 function getDataFromTable(){
   inputObject.year = document.getElementById("year").value;
   inputObject.month = document.getElementById("month").value;
   inputObject.place = document.getElementById("place").value;
 
-  for(let i = 0; i < 31; i++){
-    let rowData = [];
-    for(let j = 0; j < 6; j++){
-      let columnData = document.getElementById(`array-${i}-${j}`).value || null;
-      rowData.push(columnData);
-    }
-    inputObject.input.push(rowData);
-  }
+  // Creating arrays for day0 to day5
+  createArr(0);
+  createArr(1);
+  createArr(2);
+  createArr(3);
+  createArr(4);
+  createArr(5);
+
+  inputObject.input = [obsArr,day1Arr,day2Arr,day3Arr,day4Arr,day5Arr]
+  
   console.log(inputObject);
   localStorage.setItem('maxTempArrayData', JSON.stringify(inputObject));
 }
 
 function gotoTempResult(){
-  window.location.href = "resultTemp.html";
+  // window.location.href = "resultTemp.html";
 }
