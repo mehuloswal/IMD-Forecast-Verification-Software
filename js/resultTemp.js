@@ -3,5 +3,12 @@
 let inputObject = JSON.parse(localStorage.getItem("maxTempArrayData"));
 
 !function(){
-  document.getElementById('title-bar-output').innerText = `Forecast Verification for ${inputObject.place} in ${inputObject.month}, ${inputObject.year}`;
+
+  if(inputObject != null){
+    document.getElementById('title-bar-output').innerText = `Forecast Verification for ${inputObject.place}\n In the month of ${inputObject.month}, ${inputObject.year}`;
+  }
+  else {
+    document.getElementById('title-bar-output').innerText = `You dont have any result data inputted`;
+  }
 }();
+
