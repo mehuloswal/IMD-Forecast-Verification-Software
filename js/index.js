@@ -1,3 +1,6 @@
+// Remove old data
+localStorage.removeItem("maxTempArrayData");
+
 const years = ['2023', '2022', '2021', '2020'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 const places = ['Pune', 'Mumbai', 'Satara'];
