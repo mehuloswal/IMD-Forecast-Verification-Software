@@ -59,7 +59,7 @@ const places = ['Pune', 'Mumbai', 'Satara'];
       input.type = 'text';
       input.value = '';
       input.id = `array-${i}-${j}`;
-      input.addEventListener('change',(e)=>{this.value = input.value});
+      // input.addEventListener('change',(e)=>{this.value = input.value});
       cell.appendChild(input);
       row.appendChild(cell);
     }
