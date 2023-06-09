@@ -1,7 +1,10 @@
 
+let inputObject = {}
 let input = [];
 
 function getDataFromTable(){
+
+
   for(let i = 0; i < 31; i++){
     let rowData = [];
     for(let j = 0; j < 6; j++){

@@ -68,9 +68,3 @@ const places = ['Pune', 'Mumbai', 'Satara'];
   }
 }();
 
-
-//Onclick result
-
-function handleMaxTemp(){
-  
-}
