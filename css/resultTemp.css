@@ -1,0 +1,46 @@
+.workspace{
+  padding: 40px 64px 40px 64px;
+  display: grid;
+  grid-template-rows: auto 600px auto;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.title-bar{
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.title-bar-output{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  background-color: aquamarine;
+}
+
+
+
+
+
+
+
+
+
+.result-button-area{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#disclaimer{
+  margin-bottom: 16px;
+  color: var(--text-grey);
+}
