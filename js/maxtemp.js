@@ -57,7 +57,9 @@ const places = ['Pune', 'Mumbai', 'Satara'];
       const input = document.createElement('input');
       input.className = 'input-bar'
       input.type = 'text';
-      input.id = `array[${i}][${j}]`;
+      input.value = '';
+      input.id = `array-${i}-${j}`;
+      input.addEventListener('change',(e)=>{this.value = input.value});
       cell.appendChild(input);
       row.appendChild(cell);
     }

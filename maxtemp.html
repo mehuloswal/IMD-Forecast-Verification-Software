@@ -51,21 +51,24 @@
           <div class="headers input-text">4D Ago</div>
           <div class="headers input-text">5D Ago</div>
         </div>
-        <div class="input-table">
-          <div class="input-row">
-            <!-- Rows of Input come here -->
-        </div>
-      </div>
+        <form>
+          <div class="input-table">
+            <div class="input-row">
+              <!-- Rows of Input come here -->
+            </div>
+          </div>
+        </form>
     </div>
     <div class="result-button-area">
       <p id="disclaimer">
         Important : Do not refresh the page
       </p>
-      <button class="result-button" onclick="alert('Result Clicked')">
+      <button class="result-button" onclick="getDataFromTable();">
         Calculate Result
       </button>
     </div>
   </div>
 </body>
 <script src="js/maxtemp.js"></script>
+<script src="js/collectInput.js"></script>
 </html>
