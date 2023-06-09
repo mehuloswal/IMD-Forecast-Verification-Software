@@ -57,8 +57,7 @@ const places = ['Pune', 'Mumbai', 'Satara'];
       const input = document.createElement('input');
       input.className = 'input-bar'
       input.type = 'text';
-      input.id = `input_${i}_${j}`;
-      // input.addEventListener('input', handleInput);
+      input.id = `array[${i}][${j}]`;
       cell.appendChild(input);
       row.appendChild(cell);
     }
@@ -66,3 +65,10 @@ const places = ['Pune', 'Mumbai', 'Satara'];
     tableBody.appendChild(row);
   }
 }();
+
+
+//Onclick result
+
+function handleMaxTemp(){
+  
+}
