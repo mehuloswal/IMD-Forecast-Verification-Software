@@ -20,7 +20,7 @@ function getDataFromTable(){
     inputObject.input.push(rowData);
   }
   console.log(inputObject);
-  localStorage.setItem('maxTempArrayData', JSON.stringify(input));
+  localStorage.setItem('maxTempArrayData', JSON.stringify(inputObject));
 }
 
 function gotoTempResult(){
