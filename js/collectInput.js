@@ -72,8 +72,9 @@ function getDataFromTable(){
   
   console.log(inputObject);
   localStorage.setItem('maxTempArrayData', JSON.stringify(inputObject));
+  gotoTempResult();
 }
 
 function gotoTempResult(){
-  // window.location.href = "resultTemp.html";
+  window.location.href = "resultTemp.html";
 }
