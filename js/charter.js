@@ -12,10 +12,10 @@ const factorOfChange = ['No Change', 'Appreciable Change', 'Marked Rise/Fall'];
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: dates,
+      labels: dates, // Chart x axis label
       datasets: [{
         label: 'Absolute',
-        data: [1, 19, 3, 5, 2, 3],
+        data: [1, 19, 3, 5, 2, 3], // Data as array HERE
         borderWidth: 1
       }]
     },
