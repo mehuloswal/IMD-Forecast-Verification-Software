@@ -124,3 +124,43 @@ const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
     }
   });
 }();
+
+// Pie Graph for RMSE
+
+!function(){
+  const ctx = document.getElementById('chart-pie');
+  
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: factorOfChange,
+      datasets: [{
+          label: '1 Day',
+          data: [0.4,0.23,0.95,0.55], 
+          borderWidth: 1
+        }
+      ]
+    },
+    
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      animation: {
+        duration: 600
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'Root Mean Square Errors',
+            padding: {
+                top: 0,
+                bottom: 10
+            }
+        }
+      }
+    }
+  });
+}();
