@@ -36,3 +36,14 @@ h1{
   margin-bottom: 16px;
   color: var(--text-grey);
 }
+
+.output{
+  padding: 16px;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-span-2{
+  grid-column: span 2;
+}
