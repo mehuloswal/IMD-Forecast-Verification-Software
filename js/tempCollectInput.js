@@ -71,7 +71,7 @@ function getDataFromTable(){
   inputObject.input = [obsArr,day1Arr,day2Arr,day3Arr,day4Arr,day5Arr]
   
   console.log(inputObject);
-  localStorage.setItem('maxTempArrayData', JSON.stringify(inputObject));
+  localStorage.setItem('tempArrayData', JSON.stringify(inputObject));
   gotoTempResult();
 }
 

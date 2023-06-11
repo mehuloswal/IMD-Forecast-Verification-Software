@@ -2,9 +2,9 @@
 const dates = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31',];
 const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
 
+const output = JSON.parse(localStorage.getItem('finalTempData'));
 
-
-
+console.log(output);
 
 
 // For line
@@ -18,27 +18,27 @@ const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
       datasets: [
         {
           label: '1 Day',
-          data: [1, 19, 3, 5, 2, 3], // Data as array HERE
+          data: output.day1AbsoluteErrors, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '2 Day',
-          data: [1, 17, 3, 5, 2, 3], // Data as array HERE
+          data: output.day2AbsoluteErrors, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '3 Day',
-          data: [1, 19, 3, 8, 2, 3], // Data as array HERE
+          data: output.day3AbsoluteErrors, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '4 Day',
-          data: [1, 19, 6, 5, 2, 3], // Data as array HERE
+          data: output.day4AbsoluteErrors, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '5 Day',
-          data: [1, 19, 3, 5, 2, 1], // Data as array HERE
+          data: output.day5AbsoluteErrors, // Data as array HERE
           borderWidth: 1
         }
       ]
@@ -76,27 +76,27 @@ const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
       labels: factorOfChange,
       datasets: [{
           label: '1 Day',
-          data: [13,12,6], 
+          data: output.day1FrequencyErrors, 
           borderWidth: 1
         },
         { // Add more Datasets like this
           label: '2 Day', // Your Label goes here
-          data: [9,11,12], // Your Data goes here
+          data: output.day2FrequencyErrors, // Your Data goes here
           borderWidth: 2
         },
         { // Add more Datasets like this
           label: '3 Day', // Your Label goes here
-          data: [9,11,12], // Your Data goes here
+          data: output.day3FrequencyErrors, // Your Data goes here
           borderWidth: 2
         },
         { // Add more Datasets like this
           label: '4 Day', // Your Label goes here
-          data: [9,11,12], // Your Data goes here
+          data: output.day4FrequencyErrors, // Your Data goes here
           borderWidth: 2
         },
         { // Add more Datasets like this
           label: '5 Day', // Your Label goes here
-          data: [9,11,12], // Your Data goes here
+          data: output.day5FrequencyErrors, // Your Data goes here
           borderWidth: 2
         }
       ]
@@ -125,7 +125,7 @@ const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
   });
 }();
 
-// Pie Graph for RMSE
+// Line Graph for RMSE
 
 !function(){
   const ctx = document.getElementById('chart-pie');
@@ -133,10 +133,10 @@ const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: factorOfChange,
+      labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
       datasets: [{
           label: '1 Day',
-          data: [0.4,0.23,0.95,0.55], 
+          data: output.rmse, 
           borderWidth: 1
         }
       ]
