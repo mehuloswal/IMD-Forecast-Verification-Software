@@ -1,6 +1,6 @@
 // Getting the inputObject
 
-let inputObject = JSON.parse(localStorage.getItem("maxTempArrayData"));
+let inputObject = JSON.parse(localStorage.getItem("tempArrayData"));
 
 !function(){
 
