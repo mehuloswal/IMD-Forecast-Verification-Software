@@ -47,7 +47,6 @@ button:hover{
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-
 }
 
 #disclaimer{
@@ -94,6 +93,9 @@ a:hover{
 
 .input-bar{
   width: 80px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 6px;
+  padding: 2px 4px 2px 4px;
 }
 
 td{
