@@ -58,6 +58,7 @@ const boolOptions = ['Yes', 'No'];
       const cell = document.createElement('td');
       const selectbar = document.createElement('select');
       selectbar.className = 'input-bar'
+      selectbar.id = `array-${i}-${j}`;
       selectbar.innerHTML = '';
       for (const key in boolOptions) {
         selectbar.innerHTML += `<option value="${boolOptions[key]}">${boolOptions[key]}</option>`
