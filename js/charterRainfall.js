@@ -341,6 +341,7 @@ console.log(output);
   });
 }();
 
+console.log(output.ets);
 // For ETS
 !function(){
   const ctx = document.getElementById('chart-ets');
@@ -419,7 +420,6 @@ console.log(output);
   });
 }();
 
-console.log(output.tss);
 // For TSS
 !function(){
   const ctx = document.getElementById('chart-tss');
