@@ -1,5 +1,5 @@
 // Utilities
-const types = ['Hits', 'Misses', 'False Alarm', 'Correct Negative']
+const types = ['Hits', 'False Alarm', 'Misses','Correct Negative']
 const days = ['1 Day','2 Day','3 Day','4 Day','5 Day'];
 const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
 
@@ -419,7 +419,7 @@ console.log(output);
   });
 }();
 
-
+console.log(output.tss);
 // For TSS
 !function(){
   const ctx = document.getElementById('chart-tss');
