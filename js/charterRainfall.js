@@ -3,7 +3,7 @@ const types = ['Hits', 'Misses', 'False Alarm', 'Correct Negative']
 const days = ['1 Day','2 Day','3 Day','4 Day','5 Day'];
 const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
 
-const output = JSON.parse(localStorage.getItem('rainfallArrayData'));
+const output = JSON.parse(localStorage.getItem('rainData'));
 
 console.log(output);
 
@@ -19,27 +19,27 @@ console.log(output);
       datasets: [
         {
           label: '1 Day',
-          data: [20,30,10,3], // Data as array HERE
+          data: output.day1Data, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '2 Day',
-          data: [20,30,10,3], // Data as array HERE
+          data: output.day2Data, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '3 Day',
-          data: [20,30,10,3], // Data as array HERE
+          data: output.day3Data, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '4 Day',
-          data: [20,30,10,3], // Data as array HERE
+          data: output.day4Data, // Data as array HERE
           borderWidth: 1
         },
         {
           label: '5 Day',
-          data: [20,30,10,3], // Data as array HERE
+          data: output.day5Data, // Data as array HERE
           borderWidth: 1
         }
       ]
@@ -77,7 +77,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'PoD',
-          data: [3, 5,4,5,2], 
+          data: output.pod, 
           borderWidth: 1
         }
       ]
@@ -116,7 +116,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'FBI',
-          data: [3, 5,4,5,2], 
+          data: output.fbi, 
           borderWidth: 1
         }
       ]
@@ -155,7 +155,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'FAR',
-          data: [3, 5,4,5,2], 
+          data: output.far, 
           borderWidth: 1
         }
       ]
@@ -194,7 +194,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'MR',
-          data: [3, 5,4,5,2], 
+          data: output.mr, 
           borderWidth: 1
         }
       ]
@@ -233,7 +233,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'PC',
-          data: [3, 5,4,5,2], 
+          data: output.pc, 
           borderWidth: 1
         }
       ]
@@ -272,7 +272,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'Freq',
-          data: [3, 5,4,5,2], 
+          data: output.f, 
           borderWidth: 1
         }
       ]
@@ -312,7 +312,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'CSI',
-          data: [3, 5,4,5,2], 
+          data: output.csi, 
           borderWidth: 1
         }
       ]
@@ -351,7 +351,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'ETS',
-          data: [3, 5,4,5,2], 
+          data: output.ets, 
           borderWidth: 1
         }
       ]
@@ -390,7 +390,7 @@ console.log(output);
       labels: days,
       datasets: [{
           label: 'HSS',
-          data: [3, 5,4,5,2], 
+          data: output.hss, 
           borderWidth: 1
         }
       ]
@@ -409,6 +409,46 @@ console.log(output);
         title: {
             display: true,
             text: 'Heidke Skill Score',
+            padding: {
+                top: 0,
+                bottom: 10
+            }
+        }
+      }
+    }
+  });
+}();
+
+
+// For TSS
+!function(){
+  const ctx = document.getElementById('chart-tss');
+  
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: days,
+      datasets: [{
+          label: 'TSS',
+          data: output.tss, 
+          borderWidth: 1
+        }
+      ]
+    },
+    
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      animation: {
+        duration: 600
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'True Skill Score',
             padding: {
                 top: 0,
                 bottom: 10
