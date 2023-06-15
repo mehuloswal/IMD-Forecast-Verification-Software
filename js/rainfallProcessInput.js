@@ -31,11 +31,11 @@ const ETS = (arr) => {
     return Number(((arr[0]-ar)/(arr[0]+arr[1]+arr[2]-ar)).toFixed(3))
 };
 //Heidke Skill Score
-const HSS = (arr) => { return Number(((2 * (arr[0]*arr[3] - arr[1]*arr[2]))/(((arr[0]+arr[2]) * (arr[2]+arr[3])) + ((arr[0] + arr[1]) * (arr[1] + arr[3])))).toFixed(3))
-};
+const HSS = (arr) => { return Number(((2 * (arr[0]*arr[3] - arr[1]*arr[2]))/(((arr[0]+arr[2]) * (arr[2]+arr[3])) + ((arr[0] + arr[1]) * (arr[1] + arr[3])))).toFixed(3)) || 1
+}
 
 //Trust Skill Score
-const TSS = (arr) => {return Number(((arr[0]/(arr[0]+arr[2])) + (arr[3]/(arr[1] + arr[3])) - 1).toFixed(3));}
+const TSS = (arr) => {return Number(((arr[0]/(arr[0]+arr[2])) + (arr[3]/(arr[1] + arr[3])) - 1).toFixed(3)) || 1}
 
 
 
