@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/rainfall.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/resultRainfall.css">
   <title>IMD Forecast Verification</title>
 </head>
 <body>
@@ -35,41 +35,51 @@
     </div>
     <div class="workspace">
       <div class="title-bar">
-        <h1>Rainfall</h1>
-        <div class="title-bar-inputs">
-          <select class="selector" name="Year" id="year"></select>
-          <select class="selector" name="Month" id="month"></select>
-          <select class="selector" name="Place" id="place"></select>
+        <h1 style="margin-bottom: 16px;">Results</h1>
+        <div id="title-bar-output">
         </div>
       </div>
-      <div class="input">
-        <div class="top-bar input-row">
-          <div class="headers input-text">Date</div>
-          <div class="headers input-text">Observed</div>
-          <div class="headers input-text">1D Ago</div>
-          <div class="headers input-text">2D Ago</div>
-          <div class="headers input-text">3D Ago</div>
-          <div class="headers input-text">4D Ago</div>
-          <div class="headers input-text">5D Ago</div>
+      <div class="output">      
+        <div class="grid-col-span-2">
+          <canvas id="chart-all-stats"></canvas>
         </div>
-        <form action="">
-          <div class="input-table">
-            <div class="input-row">
-              <!-- Rows of Input come here -->
-            </div>
-          </div>
-        </form>
+        <div class="">
+          <canvas id="chart-pod"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-fbi"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-far"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-mr"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-pc"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-f"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-csi"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-ets"></canvas>
+        </div>
+        <div class="">
+          <canvas id="chart-hss"></canvas>
+        </div>
       </div>
       <div class="result-button-area">
-        <p id="disclaimer">
-          Important : Do not refresh the page
-        </p>
-        <button class="result-button" onclick="getDataFromTable();">
-          Calculate Result
-        </button>
+      <p id="disclaimer">
+        Important : Do not refresh the page
+      </p>
       </div>
     </div>
-  </body>
-  <script src="js/rainfall.js"></script>
-  <script src="js/rainfallCollectInput.js"></script>
-  </html>
+</body>
+  <script src="js/rainfallCollectInput"></script>
+  <script src="js/resultTemp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/charterRainfall.js"></script>
+</html>
