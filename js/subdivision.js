@@ -1,7 +1,7 @@
 const years = ['2023', '2022', '2021', '2020'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 const places = ['Pune', 'Mumbai', 'Satara'];
-const boolOptions = ['Yes', 'No'];
+const boolOptions = ['Dry','Isolated','Scattered', 'Fairly Widespread', 'Widespread'];
 
 // Initial Year Rendering in Select Button
 !function(){
@@ -36,4 +36,37 @@ const boolOptions = ['Yes', 'No'];
 
   document.querySelector('#place').innerHTML = placeSelectors;
   
+}();
+
+// Initial Input Data Rendering in input section
+!function(){
+  const tableBody = document.querySelector('.input-table');
+  console.log(tableBody);
+  const numRows = 31;
+  const numCols = 6;
+
+  for (let i = 0; i < numRows; i++) {
+    const row = document.createElement('tr');
+    const date = document.createElement('div');
+    row.className = 'input-row';
+    date.innerHTML = `${i+1}`;
+    date.className = 'input-text';
+    row.appendChild(date);
+    
+    for (let j = 0; j < numCols; j++) {
+      const cell = document.createElement('td');
+      const selectbar = document.createElement('select');
+      selectbar.className = 'input-bar'
+      selectbar.id = `array-${i}-${j}`;
+      selectbar.innerHTML = '';
+      for (const key in boolOptions) {
+        selectbar.innerHTML += `<option value="${boolOptions[key]}">${boolOptions[key]}</option>`
+      }
+
+      cell.appendChild(selectbar);
+      row.appendChild(cell);
+    }
+    console.log('Running');
+    tableBody.appendChild(row);
+  }
 }();
