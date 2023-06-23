@@ -56,7 +56,6 @@ const createArr = (columnNumber) => {
 
 
 function getDataFromTable(){
-  alert("inputting");
   inputObject.year = document.getElementById("year").value;
   inputObject.month = document.getElementById("month").value;
   inputObject.place = document.getElementById("place").value;
