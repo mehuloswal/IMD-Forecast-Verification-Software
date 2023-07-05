@@ -67,4 +67,3 @@ const places = ['Pune', 'Mumbai', 'Satara'];
     tableBody.appendChild(row);
   }
 }();
-
