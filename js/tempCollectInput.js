@@ -104,6 +104,8 @@ document.getElementById("sheetjsexport").addEventListener('click', function() {
   /* Add the worksheet to the workbook */
   XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
 
+  let date = new Date();
+  let name = "Rainfall-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " " + date.getHours() + "-" + date.getMinutes();
   /* Export to file (start a download) */
-  XLSX.writeFile(wb, "SheetJSTable.xlsx");
+  XLSX.writeFile(wb, name);
 });
