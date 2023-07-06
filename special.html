@@ -30,6 +30,9 @@
         <a href="special.html">
           <button class="nav-button active" onclick="">Special Events</button>
         </a>
+        <a href="subdivision.html">
+          <button class="nav-button" onclick="">Subdivision</button>
+        </a>
       </div>
       <button class="nav-button exit" onclick="">Exit</button>
     </div>
@@ -64,10 +67,14 @@
         <p id="disclaimer">
           Important : Do not refresh the page
         </p>
-        <button class="result-button" onclick="getDataFromTable();">
-          Calculate Result
-        </button>
-        <button id="sheetjsexport"><b>Export as XLSX</b></button>
+        <div>
+          <button id="sheetjsexport" class="result-button">
+            Export as XLSX
+          </button>
+          <button class="result-button" onclick="getDataFromTable();">
+            Calculate Result
+          </button>
+        </div>
         
       </div>
     </div>
