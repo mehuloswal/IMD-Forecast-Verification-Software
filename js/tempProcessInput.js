@@ -1,4 +1,3 @@
-
 const mainInput = JSON.parse(localStorage.getItem('tempArrayData'));
 
 

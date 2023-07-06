@@ -1,6 +1,7 @@
 const years = ['2023', '2022', '2021', '2020'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 const places = ['Pune', 'Mumbai', 'Satara'];
+const boolOptions = ['Dry','Isolated','Scattered', 'Fairly Widespread', 'Widespread'];
 
 // Initial Year Rendering in Select Button
 !function(){
@@ -54,13 +55,15 @@ const places = ['Pune', 'Mumbai', 'Satara'];
     
     for (let j = 0; j < numCols; j++) {
       const cell = document.createElement('td');
-      const input = document.createElement('input');
-      input.className = 'input-bar'
-      input.type = 'text';
-      input.value = '';
-      input.id = `array-${i}-${j}`;
-      // input.addEventListener('change',(e)=>{this.value = input.value});
-      cell.appendChild(input);
+      const selectbar = document.createElement('select');
+      selectbar.className = 'input-bar'
+      selectbar.id = `array-${i}-${j}`;
+      selectbar.innerHTML = '';
+      for (const key in boolOptions) {
+        selectbar.innerHTML += `<option value="${boolOptions[key]}">${boolOptions[key]}</option>`
+      }
+
+      cell.appendChild(selectbar);
       row.appendChild(cell);
     }
     console.log('Running');
