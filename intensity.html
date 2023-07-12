@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/subdivision.css">
+  <title>IMD Forecast Verification</title>
+</head>
+<body>
+  <div class="home">
+    <div class="left-nav">
+      <div class="logo">
+        <a href="index.html"><img src="assets/Logo and Text.svg" alt="IMD Image" class="nav-logo"></a>
+      </div>
+      <div class="nav-buttons">
+        <a href="maxtemp.html">
+          <button class="nav-button" onclick="">Max. Temperature</button>
+        </a>
+        <a href="mintemp.html">
+          <button class="nav-button" onclick="">Min. Temperature</button>
+        </a>
+        <a href="rainfall.html">
+          <button class="nav-button" onclick="">Rainfall</button>
+        </a>
+        <a href="special.html">
+          <button class="nav-button" onclick="">Special Events</button>
+        </a>
+        <a href="subdivision.html">
+          <button class="nav-button" onclick="">Subdivision</button>
+        </a>
+        <a href="intensity.html">
+          <button class="nav-button" onclick="">Intensity</button>
+        </a>
+      </div>
+      <button class="nav-button exit" onclick="">Exit</button>
+    </div>
+    <div class="workspace">
+      <div class="title-bar">
+        <h1>Intensity Of Rainfall</h1>
+        <div class="title-bar-inputs">
+          <select class="selector" name="Year" id="year"></select>
+          <select class="selector" name="Month" id="month"></select>
+          <select class="selector" name="Place" id="place"></select>
+        </div>
+      </div>
+      <div class="input">
+        <div class="top-bar input-row">
+          <div class="headers input-text">Date</div>
+          <div class="headers input-text">Observed</div>
+          <div class="headers input-text">1D Ago</div>
+          <div class="headers input-text">2D Ago</div>
+          <div class="headers input-text">3D Ago</div>
+          <div class="headers input-text">4D Ago</div>
+          <div class="headers input-text">5D Ago</div>
+        </div>
+        <form action="">
+          <div class="input-table">
+            <div class="input-row">
+              <!-- Rows of Input come here -->
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="result-button-area">
+        <p id="disclaimer">
+          Important : Do not refresh the page
+        </p>
+        <div>
+          <button id="sheetjsexport" class="result-button">
+            Export as XLSX
+          </button>
+          <button class="result-button" onclick="getDataFromTable();">
+            Calculate Result
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="js/intensity.js"></script>
+<!-- Add script for collect input here @sidak -->
+</html>

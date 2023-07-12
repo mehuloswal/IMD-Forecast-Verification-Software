@@ -70,3 +70,5 @@ const boolOptions = ['Dry','Isolated','Scattered', 'Fairly Widespread', 'Widespr
     tableBody.appendChild(row);
   }
 }();
+
+
