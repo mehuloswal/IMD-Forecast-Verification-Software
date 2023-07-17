@@ -98,10 +98,48 @@ document.getElementById("sheetjsexport").addEventListener('click', function() {
   let headers = ["Day","Observed", "1D Ago", "2D Ago", "3D Ago", "4D Ago", "5D Ago"];
   transposedArr.unshift(headers);
   var ws = XLSX.utils.aoa_to_sheet(transposedArr);
-
+  let date = new Date();
+  let name = "ExcelFile-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " " + date.getHours() + "-" + date.getMinutes() + ".xlsx";
   /* Add the worksheet to the workbook */
   XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
 
   /* Export to file (start a download) */
-  XLSX.writeFile(wb, "SheetJSTable.xlsx");
+  XLSX.writeFile(wb, name);
 });
+
+document.getElementById("uploadForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const fileInput = document.getElementById("excelFile");
+  const file = fileInput.files[0];
+  console.log(fileInput);
+  console.log(file);
+  if(file){
+    const fileReader = new FileReader();
+    fileReader.onload = function(e){
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, {type : 'array'});
+      console.log(data);
+      console.log(workbook);
+      const sheetName = workbook.SheetNames[0];
+      console.log(sheetName)
+      const worksheet = workbook.Sheets[sheetName];
+      console.log(worksheet);
+      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+      console.log(jsonData);
+
+    for(let i = 0; i < 31; ++i){
+      for(let j = 0; j < 6; ++j){
+        const cell = document.getElementById(`array-${i}-${j}`)
+        cell.value = jsonData[i + 1][j + 1];
+      }
+    }
+
+
+
+    }
+    fileReader.readAsArrayBuffer(file);
+  }
+
+})
