@@ -8,6 +8,66 @@ const output = JSON.parse(localStorage.getItem('intensityData'));
 
 console.log(output);
 
+// For all stats
+!function(){
+  const ctx = document.getElementById('chart-all-stats');
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: types, // Chart x axis label
+      datasets: [
+        {
+          label: '1 Day',
+          data: output.day1Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '2 Day',
+          data: output.day2Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '3 Day',
+          data: output.day3Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '4 Day',
+          data: output.day4Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '5 Day',
+          data: output.day5Data, // Data as array HERE
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      animation: {
+        duration: 600
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'All Stats',
+            padding: {
+                top: 0,
+                bottom: 10
+            }
+        }
+      }
+    }
+  });
+}();
+
+
 // For PC
 !function(){
   const ctx = document.getElementById('chart-pc');
