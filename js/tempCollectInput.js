@@ -104,8 +104,12 @@ document.getElementById("sheetjsexport").addEventListener('click', function() {
   /* Add the worksheet to the workbook */
   XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
 
+
+
   let date = new Date();
-  let name = "Temperature-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " " + date.getHours() + "-" + date.getMinutes() + ".xlsx";
+
+  let name = "Temperature" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " -FOR- " + document.getElementById("year").value +" "+ document.getElementById("month").value +" "+ document.getElementById("place").value + ".xlsx";
+  // let name = "Temperature-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " " + date.getHours() + "-" + date.getMinutes() + ".xlsx";
   /* Export to file (start a download) */
   XLSX.writeFile(wb, name);
 });

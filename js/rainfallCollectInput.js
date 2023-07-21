@@ -99,7 +99,11 @@ document.getElementById("sheetjsexport").addEventListener('click', function() {
   transposedArr.unshift(headers);
   var ws = XLSX.utils.aoa_to_sheet(transposedArr);
   let date = new Date();
-  let name = "ExcelFile-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " " + date.getHours() + "-" + date.getMinutes() + ".xlsx";
+
+
+  let name = "ExcelFile-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " -FOR- " + document.getElementById("year").value +" "+ document.getElementById("month").value +" "+ document.getElementById("place").value + ".xlsx";
+
+
   /* Add the worksheet to the workbook */
   XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
 

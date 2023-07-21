@@ -147,32 +147,21 @@ let finalObject = {
     day3AbsoluteErrors : absErrDay3,
     day4AbsoluteErrors : absErrDay4,
     day5AbsoluteErrors : absErrDay5,
-
-
-
     //Root mean squared errors values
-
     rmse : rmseArray,
-
     //Frequency of error within range
-
     day1FrequencyErrors : day1FrequencyArr,
     day2FrequencyErrors : day2FrequencyArr,
     day3FrequencyErrors : day3FrequencyArr,
     day4FrequencyErrors : day4FrequencyArr,
     day5FrequencyErrors : day5FrequencyArr,
-
     //Percentage values of the frequencies
-
     day1PercentageErrors: day1PercentageArr,
     day2PercentageErrors: day2PercentageArr,
     day3PercentageErrors: day3PercentageArr,
     day4PercentageErrors: day4PercentageArr,
     day5PercentageErrors: day5PercentageArr,
-
 }
-
-
-
+// Store in Local Storage
 localStorage.removeItem("maxTempArr");
 localStorage.setItem("finalTempData", JSON.stringify(finalObject));

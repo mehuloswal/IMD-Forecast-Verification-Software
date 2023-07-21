@@ -103,7 +103,10 @@ let inputObject = {
     XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
     let date = new Date();
 
-    let name = "Intensity-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " " + date.getHours() + "-" + date.getMinutes() + ".xlsx";
+
+    let name = "Intensity-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " -FOR- " + document.getElementById("year").value +" "+ document.getElementById("month").value +" "+ document.getElementById("place").value + ".xlsx";
+
+
   
     /* Export to file (start a download) */
     XLSX.writeFile(wb,name);
