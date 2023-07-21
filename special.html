@@ -33,6 +33,9 @@
         <a href="subdivision.html">
           <button class="nav-button" onclick="">Subdivision</button>
         </a>
+        <a href="intensity.html">
+          <button class="nav-button" onclick="">Intensity</button>
+        </a>
       </div>
       <button class="nav-button exit" onclick="">Exit</button>
     </div>
@@ -42,7 +45,7 @@
         <div class="title-bar-inputs">
           <select class="selector" name="Year" id="year"></select>
           <select class="selector" name="Month" id="month"></select>
-          <select class="selector" name="Place" id="place"></select>
+          <input class="selector" placeholder="Enter SubDivision" id="place" value="">
         </div>
       </div>
       <div class="input">
@@ -74,6 +77,10 @@
           <button class="result-button" onclick="getDataFromTable();">
             Calculate Result
           </button>
+          <form id="uploadForm">
+            <input type="file" name="excelFile" id="excelFile" accept=".xlsx, .xls">
+            <input type="submit" value="Upload" id="uploadButton">
+          </form>
         </div>
         
       </div>

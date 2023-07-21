@@ -54,7 +54,7 @@ let inputObject = {
   
   }
   
-
+  
   function createAoA() {
     createArr(0);
     createArr(1);
@@ -75,13 +75,14 @@ let inputObject = {
     inputObject.input = [obsArr,day1Arr,day2Arr,day3Arr,day4Arr,day5Arr]
     
     console.log(inputObject);
-    localStorage.setItem('subDivisionArrayData', JSON.stringify(inputObject));
-    gotoSubDivisionResult();
+    localStorage.setItem('intensityArrayData', JSON.stringify(inputObject));
+    gotoTempResult();
   }
   
-  function gotoSubDivisionResult(){
-    window.location.href = "resultSubDivision.html";
+  function gotoTempResult(){
+    window.location.href = "resultIntensity.html";
   }
+  
   
   document.getElementById("sheetjsexport").addEventListener('click', function() {
     createAoA();
@@ -100,16 +101,16 @@ let inputObject = {
   
     /* Add the worksheet to the workbook */
     XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-    
-  let date = new Date();
-  let name = "SubDivision-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " -FOR- " + document.getElementById("year").value +" "+ document.getElementById("month").value +" "+ document.getElementById("place").value + ".xlsx";
+    let date = new Date();
+
+
+    let name = "Intensity-" + date.getFullYear()+"/"+(date.getMonth()+1)+"/"+ date.getDate() + " -FOR- " + document.getElementById("year").value +" "+ document.getElementById("month").value +" "+ document.getElementById("place").value + ".xlsx";
 
 
   
     /* Export to file (start a download) */
-    XLSX.writeFile(wb, name);
+    XLSX.writeFile(wb,name);
   });
-
 
   document.getElementById("uploadForm").addEventListener("submit", (event) => {
     event.preventDefault();

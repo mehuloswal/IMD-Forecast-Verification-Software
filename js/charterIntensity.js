@@ -4,9 +4,69 @@ const days = ['1 Day','2 Day','3 Day','4 Day','5 Day'];
 const factorOfChange = ['<=1', '>1 & <2', '>2 & <3', '>3'];
 
 
-const output = JSON.parse(localStorage.getItem('subdivData'));
+const output = JSON.parse(localStorage.getItem('intensityData'));
 
 console.log(output);
+
+// For all stats
+!function(){
+  const ctx = document.getElementById('chart-all-stats');
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: types, // Chart x axis label
+      datasets: [
+        {
+          label: '1 Day',
+          data: output.day1Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '2 Day',
+          data: output.day2Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '3 Day',
+          data: output.day3Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '4 Day',
+          data: output.day4Data, // Data as array HERE
+          borderWidth: 1
+        },
+        {
+          label: '5 Day',
+          data: output.day5Data, // Data as array HERE
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      animation: {
+        duration: 600
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'All Stats',
+            padding: {
+                top: 0,
+                bottom: 10
+            }
+        }
+      }
+    }
+  });
+}();
+
 
 // For PC
 !function(){
@@ -47,9 +107,9 @@ console.log(output);
   });
 }();
 
-// CSI Dry
+// CSI very light
 !function(){
-  const ctx = document.getElementById('chart-csi-dry');
+  const ctx = document.getElementById('chart-csi-vlite');
   
   new Chart(ctx, {
     type: 'line',
@@ -75,7 +135,7 @@ console.log(output);
       plugins: {
         title: {
             display: true,
-            text: 'CSI Dry',
+            text: 'CSI Very Light',
             padding: {
                 top: 0,
                 bottom: 10
@@ -86,9 +146,9 @@ console.log(output);
   });
 }();
 
-// CSI Iso
+// CSI Lite
 !function(){
-  const ctx = document.getElementById('chart-csi-iso');
+  const ctx = document.getElementById('chart-csi-lite');
   
   new Chart(ctx, {
     type: 'line',
@@ -114,7 +174,7 @@ console.log(output);
       plugins: {
         title: {
             display: true,
-            text: 'CSI Isolated',
+            text: 'CSI Light',
             padding: {
                 top: 0,
                 bottom: 10
@@ -125,9 +185,9 @@ console.log(output);
   });
 }();
 
-//CSI Scat
+//CSI Mod
 !function(){
-  const ctx = document.getElementById('chart-csi-scat');
+  const ctx = document.getElementById('chart-csi-mod');
   
   new Chart(ctx, {
     type: 'line',
@@ -153,7 +213,7 @@ console.log(output);
       plugins: {
         title: {
             display: true,
-            text: 'CSI Scattered',
+            text: 'CSI Moderate',
             padding: {
                 top: 0,
                 bottom: 10
@@ -164,9 +224,9 @@ console.log(output);
   });
 }();
 
-// CSI Fairly Widespread
+// CSI Heavy
 !function(){
-  const ctx = document.getElementById('chart-csi-fw');
+  const ctx = document.getElementById('chart-csi-heavy');
   
   new Chart(ctx, {
     type: 'line',
@@ -192,7 +252,7 @@ console.log(output);
       plugins: {
         title: {
             display: true,
-            text: 'CSI Fairly Widespread',
+            text: 'CSI Heavy',
             padding: {
                 top: 0,
                 bottom: 10
@@ -203,9 +263,9 @@ console.log(output);
   });
 }();
 
-// CSI Widespread
+// CSI Very Heavy
 !function(){
-  const ctx = document.getElementById('chart-csi-wide');
+  const ctx = document.getElementById('chart-csi-vheavy');
   
   new Chart(ctx, {
     type: 'line',
@@ -231,7 +291,46 @@ console.log(output);
       plugins: {
         title: {
             display: true,
-            text: 'CSI Widespread',
+            text: 'CSI Very Heavy',
+            padding: {
+                top: 0,
+                bottom: 10
+            }
+        }
+      }
+    }
+  });
+}();
+
+// CSI Extreme Heavy
+!function(){
+  const ctx = document.getElementById('chart-csi-eheavy');
+  
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: days, // Chart x axis label
+      datasets: [
+        {
+          label: 'PC',
+          data: [output.csi[0][5], output.csi[1][5],output.csi[2][5],output.csi[3][5],output.csi[4][5],],
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      animation: {
+        duration: 600
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'CSI Extreme Heavy',
             padding: {
                 top: 0,
                 bottom: 10

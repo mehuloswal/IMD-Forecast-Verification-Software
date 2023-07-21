@@ -1,6 +1,4 @@
-// Getting the inputObject
-
-let inputObject = JSON.parse(localStorage.getItem("subdivData"));
+let inputObject = JSON.parse(localStorage.getItem("intensityData"));
 
 !function(){
 
